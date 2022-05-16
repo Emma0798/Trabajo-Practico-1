@@ -6,6 +6,7 @@ body{
     background-color: rgba(243, 211, 184, 75%);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 /*Empieza el header*/
@@ -41,14 +42,16 @@ h1{
 }
 .navegacion li{
 
-    border: medium solid #f3d3b8;
+    border: medium solid #f3dbc8;
     border-radius: 1rem;
-    margin: 0 3rem;
+    margin: 0 1rem;
     padding: 1rem 2rem;
     
 }
 .navegacion li:hover{
     cursor: pointer;
+    background-color: #AF6D6A;
+    border: medium solid #AF6D6A;
 }
 
 .navegacion a{
@@ -58,7 +61,6 @@ h1{
     font-weight: 600;
 
 }
-
 
 
 /*Empieza el main*/
@@ -79,6 +81,7 @@ section{
     /* border:  medium solid #a43820; */
 }
 
+
 .history{
     margin: 0 1rem;
     height: auto;
@@ -89,6 +92,9 @@ section{
     text-align: left;
     padding: 1.5rem;
     color: rgb(49, 48, 48);
+}
+.history p:hover{
+    font-weight: bold;
 }
 
 .history img{
@@ -113,6 +119,10 @@ article{
     text-align: left;
     padding: 1rem 5rem;
     text-decoration: underline #fff;
+}
+.subtittle:hover{
+    color: #B78784;
+    text-decoration: underline #B78784;;
 }
 .container-ingredientes{
     
@@ -181,6 +191,7 @@ aside{
 }
 
 
+
 /*Empieza el footer*/
 footer{
     background-color: #a43820;
@@ -194,8 +205,10 @@ footer{
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    
+    justify-content: space-evenly; 
+}
+.redes-sociales > span:hover{
+    color: #571e11;
 }
 
 .wpp-flotante{
@@ -210,4 +223,52 @@ footer{
     background-color: #a43820;
     border-radius: 1.5rem;
     box-shadow: -2px 3px 6px #571e11;
+}
+
+
+.formulario-contacto{
+  display: block;
+  margin: auto;
+  /* border: medium solid #8b311d; */
+  width: 30%;
+  padding: 2rem;
+  background-color: #a43820;
+  border-radius: 1rem;
+}
+
+.formulario-contacto > *{
+    display: block;
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    border-radius: .35rem;
+}
+
+.formulario-contacto > input,textarea{
+    width: 100%;
+    margin-bottom: .75rem;
+    padding: 0.5rem .25rem;
+    background-color:#ebb6aa;
+    border: none;
+}
+.formulario-contacto > input:hover,textarea:hover{
+    border: 2px solid #571e11;
+
+}
+
+.formulario-contacto >label{
+    margin-bottom: .35rem;
+    color: #fff;
+}
+.formulario-contacto input[type="submit"]{
+    width: 40%;
+    border:none;
+    margin: 0 auto;
+    padding: .5rem 0;
+    background-color: #661f0f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.formulario-contacto input[type="submit"]:hover{
+    background-color: #803121;
 }
