@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Receta Mbaipy">
+    <meta name="keywords" content="Receta, Comida, Mbaipy, Preparacion">
+    <meta name="author" content="Esteban Emmanuel Cáceres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/Estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +22,19 @@
     <header>
         <h1>Receta de Mbaipy</h1>
         <nav>
-            <ul class="navegacion">
-                <li><a href="https://www.paulinacocina.net/sopa-de-mani-boliviana-elba-masterchef/4962">Sopa de maní</a></li>
-                <li><a href="https://www.paulinacocina.net/hummus-receta/4965">Hummus</a></li>
-                <li><a href="https://www.paulinacocina.net/como-hacer-polenta-con-tuco/25872">Polenta</a></li>
-                <li><a href="https://www.paulinacocina.net/receta-de-locro-argentino/9829">Locro</a></li>
-                <li><a href="contactos.html">Contacto</a></li>
-            </ul>
+            <div class="nav-container">
+                <label for="menu" class="nav-label">
+                    <i class='bx bx-menu nav-img'></i>
+                </label>
+                <input type="checkbox" id="menu" class="nav-input">
+                <ul class="navegacion">
+                    <li><a href="https://www.paulinacocina.net/sopa-de-mani-boliviana-elba-masterchef/4962">Sopa de maní</a></li>
+                    <li><a href="https://www.paulinacocina.net/hummus-receta/4965">Hummus</a></li>
+                    <li><a href="https://www.paulinacocina.net/como-hacer-polenta-con-tuco/25872">Polenta</a></li>
+                    <li><a href="https://www.paulinacocina.net/receta-de-locro-argentino/9829">Locro</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="main">
@@ -33,7 +42,10 @@
         <Section class="recepy">
             <div class="history">
                 <p>El mbaipy, también conocido como mbaipí y mbaipú es un plato típico de la gastronomía guaraní; y en la actualidad es muy común en todo el Paraguay y en el noroeste de Argentina. Se trata de un platillo sumamente nutritivo y calórico hecho con harina de maíz, algunos vegetales y carnes como: pollo, charqui o chorizo.</p>
-                <img class="mbaipy" src="Images/Imagen.jpg" alt="Mbaipy">
+                <div class="imagenes">
+                    <img class="mbaipy" src="Images/Imagen.jpg" alt="Mbaipy">
+                    <img class="mbaipy-2" src="Images/mbaipy-2.jpg" alt="Mbaipy2">
+                </div>
              </div>
              <article>
                 <div class="container-ingredientes">
@@ -53,7 +65,6 @@
                 </div>
                 
                 
-        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/f0xlrLcaYMI" title="Receta Mbaipy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <div class="container-preparacion">
             <h2 class="subtittle">Preparación</h2>
                 <ol class="Preparacion">
@@ -102,6 +113,8 @@
         <aside class="container-aside">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2188744.620682101!2d-58.63382958114988!3d-25.712990696980157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945c083490f13d63%3A0xb3faff611d582ef3!2sParaguay!5e0!3m2!1ses-419!2sar!4v1650900885588!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <video src="Images/Mbaipy.mp4" controls></video>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2188744.620682101!2d-58.63382958114988!3d-25.712990696980157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945c083490f13d63%3A0xb3faff611d582ef3!2sParaguay!5e0!3m2!1ses-419!2sar!4v1650900885588!5m2!1ses-419!2sar">Mapa</a>
+            <a href="https://www.youtube.com/watch?v=f0xlrLcaYMI&t=6s"> Video</a>
         </aside>
         <div class="wpp-flotante">
             <a href="https://api.whatsapp.com/send?phone=261512063"><i class='bx bxl-whatsapp bx-lg bx-tada-hover' style='color:#f3d3b8'></i></a>

@@ -19,7 +19,7 @@ header{
     flex-wrap: wrap;
     padding: .5rem 0;
     box-shadow: 0px 5px 10px gray;
-    width: 100%;
+    width: 100vw;
 }
 
 h1{
@@ -37,6 +37,7 @@ h1{
 }
 .navegacion{
     padding: 2rem 2rem;
+    padding-left: 0px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -50,6 +51,9 @@ h1{
     padding: 1rem 2rem;
     
 }
+.navegacion>li:nth-child(1){
+    margin-left: 0;
+}
 .navegacion li:hover{
     cursor: pointer;
     background-color: #AF6D6A;
@@ -62,6 +66,9 @@ h1{
     font-family: 'Raleway';
     font-weight: 600;
 
+}
+.nav-label, .nav-input{
+    display: none;
 }
 
 
@@ -100,12 +107,18 @@ section{
 .history p:hover{
     font-weight: bold;
 }
-
-.history img{
-    width: 60%;
-    padding-left: 24px;
-    
-    
+.imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.mbaipy{
+    width: 40%;
+    height: 40vh;
+}
+.mbaipy-2{
+    width: 30%;
+    height: 50vh;
 }
 article{
     display: flex;
@@ -131,7 +144,7 @@ article{
 .container-ingredientes{
     
     width: 40%;
-    margin: 2rem;
+    margin: 2rem .5rem;
     border-radius: 2rem;
     background-color: #a43820;
     padding-bottom: 2rem;
@@ -150,7 +163,7 @@ article{
 }
 .container-preparacion{
     width: 45%;
-    margin: 2rem;
+    margin: 2rem .5rem;
     padding-bottom: 2rem;
     background-color: #a43820;
     border-radius: 2rem;
@@ -196,6 +209,9 @@ aside{
 .container-aside video{
     width: 100%;
  /*padding-left: 2rem;*/
+}
+.container-aside a{
+    display: none;
 }
 
 
@@ -286,4 +302,184 @@ footer{
     font-family: "Roboto";
     src: url(../fonts/Roboto-Regular.ttf)
     format('truetype');
+}
+
+@media (max-width: 768px){
+    
+    header{
+        flex-direction: row;
+        position: sticky;
+        top: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        font-size: 2rem;
+        margin-left: 1.5rem;
+        width: 50vw;
+    }
+
+    .nav-label{
+        display: block;
+    }
+    .bx-menu{
+        margin-right: 1.5rem;
+        font-size: 40px;
+        color: #f3d3b8;
+    }
+    .navegacion{
+        position: fixed;
+        top: 115px;
+        bottom: 0;
+        background-color: #720300;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-right: 0;
+        
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .navegacion li{
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+     
+    .nav-input:checked + .navegacion{
+        clip-path: circle(100% at center);
+    }
+    .wpp-flotante{
+        display: none;
+    }
+    
+    main{
+        flex-direction: column;
+        margin:  0 0;
+    }
+    section{
+        width: 100%;
+        flex-wrap: nowrap;
+    
+    }
+    .mbaipy{
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .mbaipy-2{
+        display: none;
+    }
+    article{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        
+    }
+    .subtittle{
+        padding: 1rem 5rem;
+        display: inline-block;
+    }
+    .container-ingredientes{
+        width: 70%;
+    }
+     .container-preparacion{
+        width: 70%;
+    }
+  
+    .container-preparacion li{
+        /*padding-left: .25rem;*/
+        padding-bottom: .25rem;
+    }
+    .container-aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .container-aside a{
+        display: block;
+        background-color: #a43820;
+        margin-bottom: 2rem;
+        width: 30%;
+        height: 6vh;
+        border-radius: .75rem;
+        padding-top: .75rem;
+        text-align: center;
+        text-decoration: none;
+        color: #f3d3b8;
+        font-family: 'Raleway';
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .container-aside iframe,video {
+        display: none;
+    }
+
+    .formulario-contacto{
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width:1200px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        width: 40vw;
+    }
+    .navegacion{
+        padding: 2rem 0;
+        padding-bottom: 1.5rem;
+    }
+    .navegacion li{
+        margin: .5rem .5rem;
+    }
+    main{
+        flex-direction: column;
+    }
+    .recepy{
+        width: 100%;
+    }
+    .history .mbaipy{
+        width: 50%;
+    }
+    article{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .subtittle{
+        padding-left: 2.5rem;
+    }
+    .container-ingredientes{
+        margin: 2rem .5rem;
+    }
+
+    .container-preparacion{
+        margin: 2rem .5rem
+    }
+    .container-aside{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container-aside video{
+        width: 40%;
+    }
+    .container-aside iframe{
+        width: 40%;
+    }
+   
+    
 }
